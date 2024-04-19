@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('#timezoneTable tbody tr').forEach(row => {
         const plusButton = row.querySelector('.plus');
-        // const minusButton = row.querySelector('.minus');
-        // const addNameButton = row.querySelector('.add-name');
+        const minusButton = row.querySelector('.minus');
+        const addNameButton = row.querySelector('.add-name');
         const clicksCell = row.cells[3];
         const namesCell = row.cells[5];
 
