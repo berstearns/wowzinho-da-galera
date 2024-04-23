@@ -42,3 +42,9 @@ button {
     max-width: 300px; /* Avoid too wide name columns */
     word-wrap: break-word; /* Wrap long names */
 }
+
+span.nome {
+  border-right: solid 0.3em red;
+  width: auto;
+}
+

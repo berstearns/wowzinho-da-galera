@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+table {
+    width: 90%; /* Allow extra width for more columns */
+    margin: 20px auto;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #f9f9f9; /* Highlight row on hover */
+}
+
+td {
+    cursor: pointer; /* Indicates interactability */
+}
+
+td input {
+    border: none;
+    background: transparent;
+    text-align: center;
+}

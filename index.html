@@ -4,9 +4,14 @@
 <meta charset="UTF-8">
 <title>Jogatina</title>
 <link rel="stylesheet" href="/styles.css">
+<script src="
+https://cdn.jsdelivr.net/npm/redis@4.6.13/dist/index.min.js
+"></script>
 </head>
 <body>
 <h2>Jogatina 20/04/2024 </h2>
+<h1> Nome do meliante </h1>
+<input type="text" id="nome" >
 <table id="timezoneTable">
     <thead>
         <tr>
@@ -14,45 +19,105 @@
             <th>Rio</th>
             <th>Salt Lake</th>
             <th>Confirmados</th>
+            <th>Adicionar nome</th>
             <th>Listinha VIP</th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td>Sat 02:00am</td><td>Fri 22:00</td><td>Fri 19:00</td><td>0</td>
-            <td><button class="plus">+</button><button class="minus">-</button><button class="add-name">Add Name</button></td>
-            <td></td>
+            <td><button class="add-name">Add Name</button></td>
+            <td>
+              <span class='nome'>bernardo</span> <span class='nome'>bernardo</span>
+              <span class='nome'>bernardo</span> <span class='nome'>bernardo</span>
+            </td>
         </tr>
         <tr>
             <td>Sat 03:00am</td><td>Fri 23:00</td><td>Fri 20:00</td><td>0</td>
+            <td><button class="add-name">Add Name</button></td>
+            <td>
+              <span class='nome'>bernardo</span> <span class='nome'>bernardo</span>
+              <span class='nome'>bernardo</span> <span class='nome'>bernardo</span>
+            </td>
         </tr>
         <tr>
             <td>Sat 04:00am</td><td>Sat 00:00</td><td>Fri 21:00</td><td>0</td>
+            <td><button class="add-name">Add Name</button></td>
+            <td>
+              <span class='nome'>bernardo</span> <span class='nome'>bernardo</span>
+              <span class='nome'>bernardo</span> <span class='nome'>bernardo</span>
+            </td>
         </tr>
         <tr>
             <td>Sat 05:00am</td><td>Sat 01:00</td><td>Fri 22:00</td><td>0</td>
+            <td><button class="add-name">Add Name</button></td>
+            <td>
+              <span class='nome'>bernardo</span> <span class='nome'>bernardo</span>
+              <span class='nome'>bernardo</span> <span class='nome'>bernardo</span>
+            </td>
         </tr>
         <tr>
             <td>Sat 06:00am</td><td>Sat 02:00</td><td>Fri 23:00</td><td>0</td>
+            <td><button class="add-name">Add Name</button></td>
+            <td>
+              <span class='nome'>bernardo</span> <span class='nome'>bernardo</span>
+              <span class='nome'>bernardo</span> <span class='nome'>bernardo</span>
+            </td>
         </tr>
         <tr>
             <td>Sun 02:00am</td><td>Sat 22:00</td><td>Sat 19:00</td><td>0</td>
+            <td><button class="add-name">Add Name</button></td>
+            <td>
+              <span class='nome'>bernardo</span> <span class='nome'>bernardo</span>
+              <span class='nome'>bernardo</span> <span class='nome'>bernardo</span>
+            </td>
         </tr>
         <tr>
             <td>Sun 03:00am</td><td>Sat 23:00</td><td>Sat 20:00</td><td>0</td>
+            <td><button class="add-name">Add Name</button></td>
+            <td>
+              <span class='nome'>bernardo</span> <span class='nome'>bernardo</span>
+              <span class='nome'>bernardo</span> <span class='nome'>bernardo</span>
+            </td>
         </tr>
         <tr>
             <td>Sun 04:00am</td><td>Sun 00:00</td><td>Sat 21:00</td><td>0</td>
+            <td><button class="add-name">Add Name</button></td>
+            <td>
+              <span class='nome'>bernardo</span> <span class='nome'>bernardo</span>
+              <span class='nome'>bernardo</span> <span class='nome'>bernardo</span>
+            </td>
         </tr>
         <tr>
             <td>Sun 05:00am</td><td>Sun 01:00</td><td>Sat 22:00</td><td>0</td>
+            <td><button class="add-name">Add Name</button></td>
+            <td>
+              <span class='nome'>bernardo</span> <span class='nome'>bernardo</span>
+              <span class='nome'>bernardo</span> <span class='nome'>bernardo</span>
+            </td>
         </tr>
         <tr>
             <td>Sun 06:00am</td><td>Sun 02:00</td><td>Sat 23:00</td><td>0</td>
+            <td><button class="add-name">Add Name</button></td>
+            <td>
+              <span class='nome'>bernardo</span> <span class='nome'>bernardo</span>
+              <span class='nome'>bernardo</span> <span class='nome'>bernardo</span>
+            </td>
         </tr>
     </tbody>
 </table>
 <script src="/script.js"></script>
+<script>
+  const client = createClient({
+    host: 'redis-14934.c10.us-east-1-2.ec2.redns.redis-cloud.com',
+    port: 14934,
+    password: 'NSM9oHrkYTUXuN6F4Aah63sxE9FlcApu'
+  })
+  .on('error', err => console.log('Redis Client Error', err))
+  .connect();
+  window.value = client.get('key');
+  client.disconnect();
+</script>
 </body>
 </html>
 
